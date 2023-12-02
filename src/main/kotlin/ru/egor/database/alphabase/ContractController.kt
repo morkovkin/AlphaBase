@@ -53,6 +53,9 @@ class ContractController {
     private lateinit var etManager: TextField
 
     @FXML
+    private lateinit var etContractNumber: TextField
+
+    @FXML
     private lateinit var etCompanyFilter: TextField
 
     private val changeContactListener: ChangeContactListener = ChangeContactListener()
@@ -190,7 +193,7 @@ class ContractController {
             return
         }
         contractRepository.addContract(
-            getMs(dateOrder), getMs(dateExt), sumResult.getOrThrow(), contact, company
+            getMs(dateOrder), getMs(dateExt), sumResult.getOrThrow(), contact, company, etContractNumber.text
         )
         contactRepository.getAllContacts().removeListener(changeContactListener)
         companyRepository.getAllCompany().removeListener(changeCompanyListener)

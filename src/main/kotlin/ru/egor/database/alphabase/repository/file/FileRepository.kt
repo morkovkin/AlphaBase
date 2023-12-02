@@ -15,6 +15,7 @@ import ru.egor.database.alphabase.repository.IContactRepository
 import ru.egor.database.alphabase.repository.IContractRepository
 import java.io.File
 import java.lang.reflect.Type
+import java.text.SimpleDateFormat
 import java.util.*
 
 class FileRepository : IContactRepository, ICompanyRepository, IContractRepository {
@@ -134,12 +135,12 @@ class FileRepository : IContactRepository, ICompanyRepository, IContractReposito
         dateExt: Long,
         summa: Double,
         manager: Contact,
-        company: Company
+        company: Company,
+        contractNumber: String
     ): Contract {
         val nextId = (getRawContracts().maxByOrNull { it.id }?.id ?: 0) + 1
-
         val rawContract =
-            RawContract(nextId, dataOrder, dateExt, summa, company.id, manager.id, UUID.randomUUID().toString())
+            RawContract(nextId, dataOrder, dateExt, summa, company.id, manager.id, contractNumber)
         addRawContract(rawContract)
         contractList.add(map(rawContract))
         return getAllContracts().find { it.id == nextId }!!

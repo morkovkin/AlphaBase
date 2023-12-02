@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="337.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.egor.database.alphabase.GenerateDocxController">
+<VBox prefHeight="337.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.egor.database.alphabase.GenerateDocxController">
     <VBox.margin>
         <Insets bottom="10.0" />
     </VBox.margin>
@@ -34,5 +34,6 @@
             <Insets bottom="10.0" />
          </VBox.margin>
       </Label>
+      <Button mnemonicParsing="false" onAction="#onReportClick" text="Создать Договор" />
    </children>
 </VBox>

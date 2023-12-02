@@ -8,58 +8,62 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="vTableConpany" alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.egor.database.alphabase.ContractController">
+<VBox fx:id="vTableConpany" alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.egor.database.alphabase.ContractController">
     <children>
         <VBox prefHeight="299.0" prefWidth="460.0">
             <children>
-                <Label text="Company"/>
+                <Label text="Компания" />
                 <TextField fx:id="etCompanyFilter">
                     <VBox.margin>
-                        <Insets bottom="10.0"/>
+                        <Insets bottom="10.0" />
                     </VBox.margin>
                 </TextField>
-                <TableView fx:id="idCompany" prefHeight="261.0" prefWidth="460.0"/>
-                <Button mnemonicParsing="false" onAction="#onAddNewCompanyClick" prefHeight="26.0" prefWidth="469.0"
-                        text="add new"/>
+                <TableView fx:id="idCompany" prefHeight="261.0" prefWidth="460.0" />
+                <Button mnemonicParsing="false" onAction="#onAddNewCompanyClick" prefHeight="26.0" prefWidth="469.0" text="Добавить новую компанию" />
             </children>
         </VBox>
         <VBox>
             <children>
-                <Label text="Manager"/>
+                <Label text="Контактное лицо" />
                 <TextField fx:id="etManager" prefHeight="26.0" prefWidth="349.0">
                     <VBox.margin>
-                        <Insets bottom="10.0"/>
+                        <Insets bottom="10.0" />
                     </VBox.margin>
                 </TextField>
-                <Button mnemonicParsing="false" onAction="#onAddContactClick" text="Добавить новый контакт"/>
+                <Button mnemonicParsing="false" onAction="#onAddContactClick" text="Добавить новый контакт" />
             </children>
         </VBox>
+      <VBox>
+         <children>
+            <Label text="Номер договора" />
+            <TextField fx:id="etContractNumber" prefHeight="26.0" prefWidth="349.0" />
+         </children>
+      </VBox>
         <VBox>
             <children>
-                <Label text="dataOrder"/>
-                <DatePicker fx:id="dateOrder"/>
-                <Label text="dateExt">
+                <Label text="Дата заключения" />
+                <DatePicker fx:id="dateOrder" />
+                <Label text="Дата заключения договора">
                     <VBox.margin>
-                        <Insets top="10.0"/>
+                        <Insets top="10.0" />
                     </VBox.margin>
                 </Label>
-                <DatePicker fx:id="dateExt"/>
+                <DatePicker fx:id="dateExt" />
             </children>
         </VBox>
         <VBox prefWidth="100.0">
             <children>
-                <Label text="Sum of Contract:"/>
-                <TextField fx:id="contractSum"/>
+                <Label text="Стоимость договора:" />
+                <TextField fx:id="contractSum" />
             </children>
         </VBox>
-        <Button mnemonicParsing="false" onAction="#onSaveClick" prefHeight="26.0" prefWidth="447.0" text="save">
+        <Button mnemonicParsing="false" onAction="#onSaveClick" prefHeight="26.0" prefWidth="447.0" text="Сохранить">
             <VBox.margin>
-                <Insets top="10.0"/>
+                <Insets top="10.0" />
             </VBox.margin>
         </Button>
     </children>
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 </VBox>

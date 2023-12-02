@@ -11,6 +11,7 @@ import org.openxmlformats.schemas.wordprocessingml.x2006.main.STHighlightColor
 import ru.egor.database.alphabase.data.Contract
 import ru.egor.database.alphabase.repository.IContractRepository
 import ru.egor.database.alphabase.util.Toast
+import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat
@@ -53,6 +54,12 @@ class GenerateDocxController {
     @FXML
     fun onReportClick() {
         val dateFormat = SimpleDateFormat("dd.MM.yyyy")
+        val outDir = File("outDocs")
+        if (!outDir.exists()) {
+            outDir.mkdir()
+        }
+
+        val outputFile = File("outDocs/договор_${contract.company.name}.docx")
         FileInputStream("data/agreement.docx").use { inputStream ->
             val doc = XWPFDocument(inputStream)
             replaceText(doc, "НомерДокумента", contract.number)
@@ -60,9 +67,10 @@ class GenerateDocxController {
             replaceText(doc, "НазваниеКонтр", contract.company.name)
             replaceText(doc, "КонтрВЛице", contract.company.owner?.name ?: contract.manager.name)
             replaceText(doc, "ФИОИП", "Иванов Иван Иванович")
-            doc.write(FileOutputStream("outDocs/договор_${contract.company.name}.docx"))
+            doc.write(FileOutputStream(outputFile))
             doc.close()
         }
+        Toast.makeText("Договор сгененрирован! " + outputFile.absolutePath)
     }
 
     private fun replaceTextInParagraph(paragraph: XWPFParagraph, originalText: String, updatedText: String) {

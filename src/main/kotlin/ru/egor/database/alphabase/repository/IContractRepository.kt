@@ -11,7 +11,8 @@ interface IContractRepository {
         dateExt: Long,
         summa: Double,
         manager: Contact,
-        company: Company
+        company: Company,
+        contractNumber: String,
     ): Contract
 
     fun getAllContracts(): ObservableList<Contract>

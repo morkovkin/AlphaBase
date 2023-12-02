@@ -47,7 +47,7 @@ class MainScreenController {
                 }
                 val scene = Scene(fxmlLoader.load())
                 stage.title = "Формирование пакета документов"
-                scene.userData = contractsTableView.selectionModel.selectedItem.company.id
+                scene.userData = contractsTableView.selectionModel.selectedItem.id
                 stage.scene = scene
                 stage.show()
             }
