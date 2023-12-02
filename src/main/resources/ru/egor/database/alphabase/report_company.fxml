@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.egor.database.alphabase.CreateReportController">
+    <children>
+        <Label fx:id="tvContractsCount" prefHeight="17.0" prefWidth="249.0">
+            <graphic>
+                <Label text="Всего контрактов:" />
+            </graphic>
+        </Label>
+        <Label fx:id="tvTotalPayment">
+            <graphic>
+                <Label prefHeight="17.0" prefWidth="194.0" text="Всего денег:" />
+            </graphic>
+        </Label>
+    </children>
+</VBox>

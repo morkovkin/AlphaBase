@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="100.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.egor.database.alphabase.AddContactController">
+    <children>
+        <TextField fx:id="contactName" promptText="Contact Name">
+            <VBox.margin>
+                <Insets bottom="10.0"/>
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="contactPhone" promptText="+7(XXX)XXX-XX-XX">
+            <VBox.margin>
+                <Insets bottom="10.0"/>
+            </VBox.margin>
+        </TextField>
+        <TextField fx:id="contactEmail" prefHeight="26.0" prefWidth="543.0" promptText="Contact email">
+            <VBox.margin>
+                <Insets bottom="10.0"/>
+            </VBox.margin>
+        </TextField>
+        <Button mnemonicParsing="false" onAction="#onAddClick" text="add contact"/>
+    </children>
+    <VBox.margin>
+        <Insets bottom="10.0"/>
+    </VBox.margin>
+</VBox>
