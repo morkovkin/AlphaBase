@@ -104,8 +104,8 @@ class ContractController {
         }
 
         val stage = Stage()
-        val scene = Scene(fxmlLoader.load(), 600.0, 300.0)
-        stage.title = "Create new company"
+        val scene = Scene(fxmlLoader.load())
+        stage.title = "Создание новой компании"
         stage.scene = scene
         stage.show()
 
@@ -166,8 +166,8 @@ class ContractController {
             injector.getInstance(instantiatedClass)
         }
         val stage = Stage()
-        val scene = Scene(fxmlLoader.load(), 400.0, 200.0)
-        stage.title = "Create new contact"
+        val scene = Scene(fxmlLoader.load())
+        stage.title = "Добавление нового контакта"
         stage.scene = scene
         stage.show()
     }
