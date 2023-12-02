@@ -32,7 +32,7 @@
                         <Insets bottom="10.0"/>
                     </VBox.margin>
                 </TextField>
-                <Button mnemonicParsing="false" onAction="#onAddContactClick" text="add new contact"/>
+                <Button mnemonicParsing="false" onAction="#onAddContactClick" text="Добавить новый контакт"/>
             </children>
         </VBox>
         <VBox>
