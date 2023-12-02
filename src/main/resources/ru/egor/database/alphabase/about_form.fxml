@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <center>
-        <Label text="Developed by Egor 2023" BorderPane.alignment="CENTER" />
-    </center>
-    <bottom>
-        <Label text="v1.0" BorderPane.alignment="CENTER" />
-    </bottom>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane disable="true" prefHeight="576.0" prefWidth="637.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="162.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../data/icon.png" />
+               </image>
+            </ImageView>
+              <Label alignment="CENTER" layoutX="301.0" layoutY="113.0" text="Developed by Egor 2023" textAlignment="CENTER" />
+              <Label layoutX="348.0" layoutY="523.0" text="v1.0" />
+            <TextArea layoutX="348.0" layoutY="201.0" prefHeight="175.0" prefWidth="339.0" text="Product Version&#10;Alphabase by Egor 1.0&#10;&#10;Build Information&#10;Version 1.0&#10;Date: 2023-12-03&#10;JavaFX Version: 21&#10;Java Version: 21, OpenJDK Runtime Environment" />
+         </children>
+      </Pane>
+   </center>
 </BorderPane>
