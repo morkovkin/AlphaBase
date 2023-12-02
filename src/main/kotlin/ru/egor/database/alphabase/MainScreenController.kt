@@ -198,7 +198,7 @@ class MainScreenController {
             }
             val managerEmail = TableColumn<Contract, String>("Почта").apply {
                 setCellValueFactory { p ->
-                    ReadOnlyObjectWrapper(p.value.manager.phone)
+                    ReadOnlyObjectWrapper(p.value.manager.email)
                 }
             }
             columns.addAll(managerName, managerPhone, managerEmail)
